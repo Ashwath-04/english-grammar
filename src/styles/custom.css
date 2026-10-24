@@ -1,0 +1,52 @@
+:root {
+	--sl-color-accent-low: #0f2a44;
+	--sl-color-accent: #3b82c4;
+	--sl-color-accent-high: #c9e1f6;
+}
+:root[data-theme='light'] {
+	--sl-color-accent-low: #d6e7f7;
+	--sl-color-accent: #1f4e79;
+	--sl-color-accent-high: #0f2a44;
+}
+
+/* Slightly larger body text: easier reading on phones. */
+.sl-markdown-content {
+	font-size: 1.0625rem;
+	line-height: 1.75;
+}
+
+.page-labels {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin-top: 0.5rem;
+}
+.label {
+	font-size: var(--sl-text-xs);
+	font-weight: 600;
+	padding: 0.15rem 0.6rem;
+	border-radius: 999px;
+	border: 1px solid;
+}
+.label-class {
+	color: var(--sl-color-accent-high);
+	background: var(--sl-color-accent-low);
+	border-color: var(--sl-color-accent);
+}
+.label-draft {
+	color: var(--sl-color-orange-high);
+	background: var(--sl-color-orange-low);
+	border-color: var(--sl-color-orange);
+}
+
+/* Practice answers: make the "Show answer" boxes easy to tap. */
+.sl-markdown-content details {
+	border: 1px solid var(--sl-color-gray-5);
+	border-radius: 0.5rem;
+	padding: 0.5rem 0.9rem;
+}
+.sl-markdown-content details summary {
+	cursor: pointer;
+	font-weight: 600;
+	color: var(--sl-color-accent-high);
+}

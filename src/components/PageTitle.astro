@@ -1,0 +1,15 @@
+---
+import Default from '@astrojs/starlight/components/PageTitle.astro';
+
+const { classes, reviewed, template } = Astro.locals.starlightRoute.entry.data;
+---
+
+<Default />
+{
+	template !== 'splash' && (!!classes?.length || !reviewed) && (
+		<div class="page-labels">
+			{classes?.map((c) => <span class="label label-class">Class {c}</span>)}
+			{!reviewed && <span class="label label-draft">Not yet reviewed</span>}
+		</div>
+	)
+}

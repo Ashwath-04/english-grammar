@@ -1,0 +1,14 @@
+---
+import Default from '@astrojs/starlight/components/MarkdownContent.astro';
+
+const { keywords } = Astro.locals.starlightRoute.entry.data;
+---
+
+<Default><slot /></Default>
+{
+	!!keywords?.length && (
+		<p class="sr-only" data-pagefind-weight="5">
+			{keywords.join(', ')}
+		</p>
+	)
+}
